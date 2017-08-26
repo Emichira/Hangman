@@ -8,7 +8,8 @@ public class App {
       Console console = System.console();
 
       List<String> myAnswers = Arrays.asList("ford", "rangerover", "mercedesbenz", "bmw", "jaguar", "audi");
-      Hangman myGame = new Hangman(myAnswers);
+      Hangman myGame = new Hangman();
+      myGame.guessedLetters(myAnswers);
 
       System.out.println("Welcome to the game Hangman:");
       System.out.println("Kindly guess our mystrey word.");
