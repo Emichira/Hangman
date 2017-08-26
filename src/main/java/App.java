@@ -15,6 +15,14 @@ public class App {
       System.out.println("Kindly guess our mystrey word.");
       System.out.println("Hint: cars");
 
+      while (!myGame.mAnswer.equals(myGame.mGuessed)) {
+          System.out.println(myGame.mGuessed);
+          String myGuess = console.readLine();
+          myGame.getGuessedLetter(myGuess);
+      }
+
+      System.out.println("Well done, you have 5 more attempts");
+
 
     }
 }
