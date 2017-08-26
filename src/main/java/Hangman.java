@@ -4,6 +4,7 @@ public class Hangman {
   public String mAnswer;
   public String mGuessed;
 
+  //gets a random word from the answer list array
   String guessedLetters(List<String> setAnswers){
       Random newRandomGenerator = new Random();
       int answerIndex = newRandomGenerator.nextInt(setAnswers.size());
@@ -16,6 +17,7 @@ public class Hangman {
       }
       mGuessed = (toSplit.toString());
       return mAnswer;
+  }
   }
 
 }
