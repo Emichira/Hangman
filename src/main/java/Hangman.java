@@ -18,6 +18,36 @@ public class Hangman {
       mGuessed = (toSplit.toString());
       return mAnswer;
   }
-  }
+  String getGuessedLetter(String myGuess) {
+    String[] myLetters = mAnswer.split("");
+    StringBuilder result = new StringBuilder();
+    String[] myGuessed;
 
+    if(mGuessed !=null) {
+      myGuessed = mGuessed.split("");
+    } else {
+      String[] answerLetters = mAnswer.split("");
+      StringBuilder toSplit = new StringBuilder();
+      for(int j=0; j<answerLetters.length; j++) {
+        toSplit.append("_");
+      }
+
+      myGuessed = (toSplit.toString()).split("");
+    }
+
+    for(int i=0;i<myLetters.length;i++){
+      if((myGuessed[i]).equals("_")) {
+        if((myLetters[i]).equals(myGuess)) {
+          result.append(myGuess);
+        } else {
+          result.append("_");
+        }
+      } else {
+        result.append(myGuessed[i]);
+      }
+    }
+    mGuessed = result.toString();
+    return mGuessed;
+
+  }
 }
