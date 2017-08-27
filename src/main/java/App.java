@@ -9,7 +9,7 @@ public class App {
 
       List<String> myAnswers = Arrays.asList("ford", "rangerover", "mercedesbenz", "bmw", "jaguar", "audi");
       Hangman myGame = new Hangman();
-      myGame.guessedLetters(myAnswers);
+      myGame.hangman(myAnswers);
 
       System.out.println("Welcome to the game Hangman:");
       System.out.println("Kindly guess our mystrey word.");

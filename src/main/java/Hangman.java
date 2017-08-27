@@ -5,7 +5,7 @@ public class Hangman {
   public String mGuessed;
 
   //gets a random word from our answers array
-  String guessedLetters(List<String> setAnswers){
+  String hangman(List<String> setAnswers){
       Random newRandomGenerator = new Random();
       int answerIndex = newRandomGenerator.nextInt(setAnswers.size());
       mAnswer = setAnswers.get(answerIndex);
